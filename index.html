@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/journal/bootstrap.min.css" rel="stylesheet"/>
+
+    <title>ЗП</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1>Добавление сотрудника</h1>
+        <form id="person-form">
+            <div class="form-group" id="select-employees-box">
+
+            </div>
+            <div class="form-group">
+                <label for="Name">ФИО:</label>
+                <input type="text" class="form-control" name="Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Стаж работы:</label>
+                <input type="number" class="form-control" name="experience" id="experience" required>
+            </div>
+
+            <div class="form-group">
+                <label for="salary">Тарифная ставка:</label>
+                <input type="number" class="form-control" name="salary" id="salary" required>
+            </div>
+            <div class="form-group">
+                <label for="koef">Корректирующий коэффициент:</label>
+                <select id="koef" name="koef" class="form-control" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+            </div>
+            <div class="checkbox checkbox-primary">
+                <label>
+                    <input type="checkbox" id="percentage"> Учитывать больничный?
+                </label>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" id="addBtn" class="btn btn-success">Добавить</button>
+                <button type="button" id="calculateAver" class="btn btn-info">Средняя зп</button>
+                <button type="button" id="dropBtn" class="btn btn-primary">Очистить БД</button>
+            </div>
+        </form>
+        <br/>
+    </div>
+    <div id="table">
+
+    </div>
+    <div class="form-group">
+        <label>Выбрать сотрудника:</label>
+        <select id="workerChooser" class="form-control" required>
+
+        </select>
+        <br>
+        <button type="button" id="getBtn" class="btn btn-info">Вывести информацию</button>
+        <ol class="emplList">
+
+        </ol>
+    </div>
+</div>
+<script data-main="js/main.js" src="js/libs/require.js"></script>
+</body>
+</html>
